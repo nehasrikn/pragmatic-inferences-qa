@@ -4,17 +4,11 @@ import pwd
 from typing import List, Any, Tuple, Union
 import pandas as pd
 
-PROJECT_ROOT_DIR_NEHA="/fs/clip-projects/rlab/nehasrik/pragmatic-inference-internal"
-PROJECT_ROOT_DIR_RUPAK="/fs/clip-political/rupak/pragmatic-inference-internal"
-PROJECT_ROOT_DIR_STYX="/Users/styx97/Projects/pragmatic-inference-internal"
-
 def get_username():
     return pwd.getpwuid(os.getuid())[0]
 
 PROJECT_ROOT_DIR_MAP = {
-    'nehasrik': PROJECT_ROOT_DIR_NEHA,
-    'rupak': PROJECT_ROOT_DIR_RUPAK,
-    'styx97': PROJECT_ROOT_DIR_STYX
+    'user': '.'
 }
 
 if get_username() not in PROJECT_ROOT_DIR_MAP:
